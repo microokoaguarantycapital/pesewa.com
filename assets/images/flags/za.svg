@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- South Africa Flag -->
+    <rect width="120" height="80" fill="#000000"/>
+    <path d="M0,0 L80,0 L0,80 Z" fill="#E03C31"/>
+    <path d="M0,0 L120,80 L0,80 Z" fill="#007A4D"/>
+    <path d="M40,0 L120,0 L0,80 L0,40 Z" fill="#001489"/>
+    <path d="M0,0 L120,80" stroke="#FFB81C" stroke-width="20"/>
+    <path d="M0,80 L120,0" stroke="#FFB81C" stroke-width="20"/>
+    <path d="M0,0 L120,80" stroke="white" stroke-width="12"/>
+    <path d="M0,80 L120,0" stroke="white" stroke-width="12"/>
+</svg>

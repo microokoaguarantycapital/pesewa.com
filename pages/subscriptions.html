@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscriptions - Pesewa.com</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/forms.css">
+    <link rel="stylesheet" href="../assets/css/tables.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body class="page-subscriptions">
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.svg" alt="Pesewa Logo" class="logo">
+                    <span class="brand-name">Pesewa.com</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./dashboard/lender-dashboard.html">Dashboard</a></li>
+                <li><a href="./lending.html">Lend</a></li>
+                <li><a href="./borrowing.html">Borrow</a></li>
+                <li><a href="./groups.html">Groups</a></li>
+                <li class="active"><a href="./subscriptions.html">Subscription</a></li>
+                <li><a href="./ledger.html">Ledger</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="user-dropdown">
+                    <button class="btn btn-outline" id="userMenuBtn">My Account</button>
+                    <div class="dropdown-content">
+                        <a href="./dashboard/borrower-dashboard.html">Borrower Dashboard</a>
+                        <a href="./dashboard/lender-dashboard.html">Lender Dashboard</a>
+                        <a href="./dashboard/admin-dashboard.html">Admin Dashboard</a>
+                        <hr>
+                        <button id="logoutBtn" class="btn-logout">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <div class="page-header">
+            <h1>Subscription Plans</h1>
+            <p>Choose a subscription tier that matches your lending goals. Borrowers do not pay subscription fees.</p>
+            <div class="subscription-status">
+                <div class="status-card">
+                    <h3>Your Current Subscription</h3>
+                    <div class="status-details">
+                        <span class="tier-badge super">Super Tier</span>
+                        <p><strong>Expires:</strong> 28 March 2024</p>
+                        <p><strong>Max Loan:</strong> ₵20,000 per week</p>
+                        <p><strong>Auto-renew:</strong> Enabled</p>
+                    </div>
+                    <button class="btn btn-primary" id="renewBtn">Renew Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="plans-container">
+            <h2>Choose Your Plan</h2>
+            <p class="section-subtitle">Lenders must subscribe to activate lending features. All plans include ledger access, group participation, and borrower ratings.</p>
+            
+            <div class="plans-grid">
+                <!-- Basic Plan -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Basic</h3>
+                        <div class="plan-price">
+                            <span class="price">₵50</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-description">For occasional lenders</p>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li>✓ Max loan: ₵1,500 per week</li>
+                            <li>✓ Up to 5 active loans</li>
+                            <li>✓ Basic ledger management</li>
+                            <li>✓ Join up to 4 groups</li>
+                            <li>✓ Borrower ratings</li>
+                            <li>✗ No CRB check access</li>
+                            <li>✗ No priority support</li>
+                        </ul>
+                    </div>
+                    <div class="plan-actions">
+                        <button class="btn btn-outline" data-tier="basic">Select Basic</button>
+                        <div class="other-options">
+                            <p>₵250 bi-annual (save ₵50)</p>
+                            <p>₵500 annual (save ₵100)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="plan-card featured">
+                    <div class="plan-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Premium</h3>
+                        <div class="plan-price">
+                            <span class="price">₵250</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-description">For regular lenders</p>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li>✓ Max loan: ₵5,000 per week</li>
+                            <li>✓ Up to 20 active loans</li>
+                            <li>✓ Advanced ledger tools</li>
+                            <li>✓ Create unlimited groups</li>
+                            <li>✓ Detailed borrower analytics</li>
+                            <li>✓ Priority borrower matching</li>
+                            <li>✗ No CRB check access</li>
+                        </ul>
+                    </div>
+                    <div class="plan-actions">
+                        <button class="btn btn-primary" data-tier="premium">Select Premium</button>
+                        <div class="other-options">
+                            <p>₵1,500 bi-annual (save ₵500)</p>
+                            <p>₵2,500 annual (save ₵500)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Super Plan -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Super</h3>
+                        <div class="plan-price">
+                            <span class="price">₵1,000</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-description">For professional lenders</p>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li>✓ Max loan: ₵20,000 per week</li>
+                            <li>✓ Unlimited active loans</li>
+                            <li>✓ Professional ledger suite</li>
+                            <li>✓ CRB check access</li>
+                            <li>✓ Debt collector integration</li>
+                            <li>✓ Premium support 24/7</li>
+                            <li>✓ Advanced risk analytics</li>
+                        </ul>
+                    </div>
+                    <div class="plan-actions">
+                        <button class="btn btn-outline" data-tier="super">Select Super</button>
+                        <div class="other-options">
+                            <p>₵5,000 bi-annual (save ₵1,000)</p>
+                            <p>₵8,500 annual (save ₵3,500)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Section -->
+        <section class="payment-section">
+            <h2>Payment Details</h2>
+            <div class="payment-container">
+                <div class="payment-methods">
+                    <h3>Choose Payment Method</h3>
+                    <div class="method-options">
+                        <div class="method-card selected">
+                            <div class="method-icon">📱</div>
+                            <div class="method-info">
+                                <h4>M-Pesa</h4>
+                                <p>Instant activation</p>
+                            </div>
+                        </div>
+                        <div class="method-card">
+                            <div class="method-icon">💳</div>
+                            <div class="method-info">
+                                <h4>Credit/Debit Card</h4>
+                                <p>Visa, MasterCard, Amex</p>
+                            </div>
+                        </div>
+                        <div class="method-card">
+                            <div class="method-icon">🏦</div>
+                            <div class="method-info">
+                                <h4>Bank Transfer</h4>
+                                <p>Processing: 1-2 hours</p>
+                            </div>
+                        </div>
+                        <div class="method-card">
+                            <div class="method-icon">💰</div>
+                            <div class="method-info">
+                                <h4>Mobile Money</h4>
+                                <p>All networks supported</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-form">
+                        <h3>Payment Information</h3>
+                        <form id="paymentForm">
+                            <div class="form-group">
+                                <label for="selectedTier">Selected Tier</label>
+                                <select id="selectedTier" class="form-control" required>
+                                    <option value="">Choose a tier</option>
+                                    <option value="basic-monthly">Basic - Monthly (₵50)</option>
+                                    <option value="basic-bi">Basic - Bi-annual (₵250)</option>
+                                    <option value="basic-annual">Basic - Annual (₵500)</option>
+                                    <option value="premium-monthly">Premium - Monthly (₵250)</option>
+                                    <option value="premium-bi">Premium - Bi-annual (₵1,500)</option>
+                                    <option value="premium-annual">Premium - Annual (₵2,500)</option>
+                                    <option value="super-monthly">Super - Monthly (₵1,000)</option>
+                                    <option value="super-bi">Super - Bi-annual (₵5,000)</option>
+                                    <option value="super-annual">Super - Annual (₵8,500)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="paymentAmount">Amount to Pay (₵)</label>
+                                <input type="number" id="paymentAmount" class="form-control" value="1000" readonly>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phoneNumber">M-Pesa Phone Number</label>
+                                <input type="tel" id="phoneNumber" class="form-control" placeholder="+233 24 123 4567" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="paymentPeriod">Subscription Period</label>
+                                <div class="period-options">
+                                    <label class="radio-label">
+                                        <input type="radio" name="period" value="monthly" checked>
+                                        <span>Monthly (renews 28th each month)</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="period" value="bi-annual">
+                                        <span>Bi-annual (6 months)</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="period" value="annual">
+                                        <span>Annual (12 months)</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="payment-summary">
+                                <h4>Order Summary</h4>
+                                <div class="summary-item">
+                                    <span>Subscription:</span>
+                                    <strong id="summaryTier">Super Tier - Monthly</strong>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Amount:</span>
+                                    <strong id="summaryAmount">₵1,000</strong>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Tax:</span>
+                                    <strong>₵0</strong>
+                                </div>
+                                <div class="summary-item total">
+                                    <span>Total:</span>
+                                    <strong id="summaryTotal">₵1,000</strong>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-large">Pay Now</button>
+                                <button type="button" class="btn btn-secondary" id="cancelPayment">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="payment-info">
+                    <h3>Subscription Benefits</h3>
+                    <div class="benefits-list">
+                        <div class="benefit">
+                            <div class="benefit-icon">🚀</div>
+                            <div class="benefit-content">
+                                <h4>Instant Activation</h4>
+                                <p>Start lending immediately after payment confirmation</p>
+                            </div>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">🔄</div>
+                            <div class="benefit-content">
+                                <h4>Auto-renewal</h4>
+                                <p>Seamless continuation of service. Cancel anytime</p>
+                            </div>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">🛡️</div>
+                            <div class="benefit-content">
+                                <h4>Money Back Guarantee</h4>
+                                <p>7-day refund policy if unsatisfied</p>
+                            </div>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">📈</div>
+                            <div class="benefit-content">
+                                <h4>Upgrade Anytime</h4>
+                                <p>Pro-rate upgrade to higher tiers</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-section">
+                        <h4>Frequently Asked Questions</h4>
+                        <div class="faq-item">
+                            <button class="faq-question">When does my subscription expire?</button>
+                            <div class="faq-answer">
+                                <p>All subscriptions expire on the 28th of each month. You will receive reminders 7 days before expiry.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Can I downgrade my plan?</button>
+                            <div class="faq-answer">
+                                <p>Yes, you can downgrade at the end of your billing cycle. Contact support for assistance.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">What happens if I don't renew?</button>
+                            <div class="faq-answer">
+                                <p>If your subscription expires, you won't be able to create new loans until you renew. Existing loans remain active.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pesewa.com</h3>
+                <p>Emergency micro-lending in trusted circles across Africa.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./qa.html">Q&A</a></li>
+                    <li><a href="./blacklist.html">Blacklist</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Pesewa.com. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/subscriptions.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Plan selection
+            const planButtons = document.querySelectorAll('.plan-actions .btn');
+            const tierSelect = document.getElementById('selectedTier');
+            const paymentAmount = document.getElementById('paymentAmount');
+            const summaryTier = document.getElementById('summaryTier');
+            const summaryAmount = document.getElementById('summaryAmount');
+            const summaryTotal = document.getElementById('summaryTotal');
+
+            planButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const tier = this.dataset.tier;
+                    const isFeatured = this.closest('.plan-card').classList.contains('featured');
+                    
+                    // Update UI
+                    planButtons.forEach(b => b.classList.remove('btn-primary'));
+                    planButtons.forEach(b => b.classList.add('btn-outline'));
+                    
+                    if (isFeatured) {
+                        this.classList.remove('btn-outline');
+                        this.classList.add('btn-primary');
+                    } else {
+                        this.classList.remove('btn-outline');
+                        this.classList.add('btn-primary');
+                    }
+
+                    // Update payment form
+                    const tierMap = {
+                        'basic': 'basic-monthly',
+                        'premium': 'premium-monthly',
+                        'super': 'super-monthly'
+                    };
+                    
+                    tierSelect.value = tierMap[tier];
+                    updatePaymentSummary();
+                });
+            });
+
+            // Payment method selection
+            const methodCards = document.querySelectorAll('.method-card');
+            methodCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    methodCards.forEach(c => c.classList.remove('selected'));
+                    this.classList.add('selected');
+                });
+            });
+
+            // Update payment summary
+            function updatePaymentSummary() {
+                const selectedOption = tierSelect.options[tierSelect.selectedIndex];
+                const text = selectedOption.text;
+                const value = selectedOption.value;
+                
+                // Extract amount from text
+                const match = text.match(/\(₵([\d,]+)\)/);
+                const amount = match ? match[1].replace(',', '') : '1000';
+                
+                paymentAmount.value = amount;
+                summaryTier.textContent = text.split('(')[0].trim();
+                summaryAmount.textContent = `₵${parseInt(amount).toLocaleString()}`;
+                summaryTotal.textContent = `₵${parseInt(amount).toLocaleString()}`;
+            }
+
+            tierSelect.addEventListener('change', updatePaymentSummary);
+            updatePaymentSummary();
+
+            // FAQ functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const isOpen = answer.style.display === 'block';
+                    
+                    // Close all answers
+                    document.querySelectorAll('.faq-answer').forEach(ans => {
+                        ans.style.display = 'none';
+                    });
+                    
+                    // Toggle this answer
+                    answer.style.display = isOpen ? 'none' : 'block';
+                });
+            });
+
+            // Payment form submission
+            document.getElementById('paymentForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const phone = document.getElementById('phoneNumber').value;
+                const amount = paymentAmount.value;
+                
+                if (!phone) {
+                    alert('Please enter your phone number.');
+                    return;
+                }
+                
+                alert(`Payment initiated! Please check your phone ${phone} to complete the payment of ₵${amount}. Your subscription will activate immediately after confirmation.`);
+                this.reset();
+                updatePaymentSummary();
+            });
+
+            // Renew button
+            document.getElementById('renewBtn').addEventListener('click', function() {
+                document.querySelector('.payment-section').scrollIntoView({ behavior: 'smooth' });
+            });
+
+            // Logout
+            document.getElementById('logoutBtn').addEventListener('click', function() {
+                if (confirm('Are you sure you want to logout?')) {
+                    window.location.href = '../index.html';
+                }
+            });
+
+            // User dropdown
+            const userMenuBtn = document.getElementById('userMenuBtn');
+            const dropdownContent = document.querySelector('.dropdown-content');
+
+            userMenuBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+            });
+
+            window.addEventListener('click', function() {
+                dropdownContent.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rwanda - Pesewa.com</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../../assets/css/tables.css">
+    <link rel="stylesheet" href="../../assets/css/forms.css">
+    <link rel="stylesheet" href="../../assets/css/animations.css">
+    <link rel="manifest" href="../../manifest.json">
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/logo.svg">
+</head>
+<body class="page-country rwanda">
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="../../index.html">
+                    <img src="../../assets/images/logo.svg" alt="Pesewa Logo" class="logo">
+                    <span class="brand-name">Pesewa.com</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../dashboard/borrower-dashboard.html">Dashboard</a></li>
+                <li><a href="../lending.html">Lend</a></li>
+                <li><a href="../borrowing.html">Borrow</a></li>
+                <li><a href="../groups.html">Groups</a></li>
+                <li><a href="index.html">Countries</a></li>
+                <li class="active"><a href="rwanda.html">Rwanda</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="language-selector">
+                    <select id="languageSelect" class="form-select-small">
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                        <option value="rw">Kinyarwanda</option>
+                    </select>
+                </div>
+                <div class="user-dropdown">
+                    <button class="btn btn-outline" id="userMenuBtn">My Account</button>
+                    <div class="dropdown-content">
+                        <a href="../dashboard/borrower-dashboard.html">Borrower Dashboard</a>
+                        <a href="../dashboard/lender-dashboard.html">Lender Dashboard</a>
+                        <a href="../dashboard/admin-dashboard.html">Admin Dashboard</a>
+                        <hr>
+                        <button id="logoutBtn" class="btn-logout">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <!-- Country Header -->
+        <div class="country-header">
+            <div class="country-flag-large">
+                <img src="../../assets/images/flags/rw.svg" alt="Rwanda Flag">
+            </div>
+            <div class="country-info">
+                <h1>Rwanda 🇷🇼</h1>
+                <p class="country-subtitle">Emergency micro-lending in trusted Rwandan circles. Connect with lenders and borrowers in your community.</p>
+                <div class="country-stats-header">
+                    <div class="stat">
+                        <span class="stat-number">400</span>
+                        <span class="stat-label">Groups</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50,000</span>
+                        <span class="stat-label">Users</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">FRw 85B</span>
+                        <span class="stat-label">Total Lent</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99.2%</span>
+                        <span class="stat-label">Repayment Rate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Tabs -->
+        <div class="dashboard-tabs">
+            <button class="tab-btn active" data-tab="overview">Overview</button>
+            <button class="tab-btn" data-tab="groups">Groups</button>
+            <button class="tab-btn" data-tab="lenders">Lenders</button>
+            <button class="tab-btn" data-tab="borrowers">Borrowers</button>
+            <button class="tab-btn" data-tab="calculator">Calculator</button>
+            <button class="tab-btn" data-tab="contact">Contact Rwanda</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Overview Tab -->
+            <div class="tab-pane active" id="overview">
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <h3>🎯 About Rwanda Operations</h3>
+                        <p>Pesewa.com operates across Rwanda with strong presence in Kigali, Huye, and Musanze. We integrate with mobile money and banking systems for seamless transactions.</p>
+                        <ul>
+                            <li>Currency: Rwandan Franc (RWF, FRw)</li>
+                            <li>Local partners: MTN Mobile Money, Airtel Money, Bank of Kigali</li>
+                            <li>Regulatory compliance: National Bank of Rwanda registered</li>
+                            <li>Languages: Kinyarwanda, English, French</li>
+                        </ul>
+                    </div>
+                    <div class="overview-card">
+                        <h3>📊 Live Statistics</h3>
+                        <div class="stats-grid-small">
+                            <div class="stat-small">
+                                <span class="stat-label">Active Loans</span>
+                                <span class="stat-value">3,000</span>
+                            </div>
+                            <div class="stat-small">
+                                <span class="stat-label">Today's Transactions</span>
+                                <span class="stat-value">FRw 800M</span>
+                            </div>
+                            <div class="stat-small">
+                                <span class="stat-label">New Groups Today</span>
+                                <span class="stat-value">3</span>
+                            </div>
+                            <div class="stat-small">
+                                <span class="stat-label">Default Rate</span>
+                                <span class="stat-value">0.8%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-card">
+                        <h3>🏆 Top Performing Groups</h3>
+                        <div class="top-groups">
+                            <div class="group-item">
+                                <span class="group-name">Kigali Innovation Hub</span>
+                                <span class="group-rating">⭐ 4.9</span>
+                            </div>
+                            <div class="group-item">
+                                <span class="group-name">Huye University Network</span>
+                                <span class="group-rating">⭐ 4.8</span>
+                            </div>
+                            <div class="group-item">
+                                <span class="group-name">Musanze Tourism Group</span>
+                                <span class="group-rating">⭐ 4.7</span>
+                            </div>
+                            <div class="group-item">
+                                <span class="group-name">Rwanda Women Entrepreneurs</span>
+                                <span class="group-rating">⭐ 4.8</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-card">
+                        <h3>🚀 Quick Actions</h3>
+                        <div class="quick-actions">
+                            <a href="../groups.html" class="btn btn-primary btn-block">Join a Group</a>
+                            <a href="../borrowing.html" class="btn btn-secondary btn-block">Borrow Now</a>
+                            <a href="../lending.html" class="btn btn-secondary btn-block">Start Lending</a>
+                            <a href="../subscriptions.html" class="btn btn-outline btn-block">View Subscriptions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Groups Tab -->
+            <div class="tab-pane" id="groups">
+                <div class="section-header">
+                    <h2>Groups in Rwanda</h2>
+                    <div class="section-actions">
+                        <input type="text" placeholder="Search groups..." class="form-control">
+                        <button class="btn btn-primary" onclick="location.href='../groups.html'">Create Group</button>
+                    </div>
+                </div>
+                <div class="groups-table">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Group Name</th>
+                                <th>Region</th>
+                                <th>Members</th>
+                                <th>Type</th>
+                                <th>Avg. Rating</th>
+                                <th>Default Rate</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Kigali Innovation Hub</strong>
+                                    <p class="group-description">Tech and innovation professionals</p>
+                                </td>
+                                <td>Kigali</td>
+                                <td>350/1000</td>
+                                <td>Professional</td>
+                                <td>⭐ 4.9</td>
+                                <td><span class="rate-low">0.5%</span></td>
+                                <td><button class="btn btn-small btn-primary">Join</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Huye University Network</strong>
+                                    <p class="group-description">University students and staff</p>
+                                </td>
+                                <td>Southern Province</td>
+                                <td>300/1000</td>
+                                <td>Education</td>
+                                <td>⭐ 4.8</td>
+                                <td><span class="rate-low">0.7%</span></td>
+                                <td><button class="btn btn-small btn-primary">Join</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Musanze Tourism Group</strong>
+                                    <p class="group-description">Tourism industry workers</p>
+                                </td>
+                                <td>Northern Province</td>
+                                <td>250/1000</td>
+                                <td>Tourism</td>
+                                <td>⭐ 4.7</td>
+                                <td><span class="rate-low">1.0%</span></td>
+                                <td><button class="btn btn-small btn-primary">Join</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Rwanda Women Entrepreneurs</strong>
+                                    <p class="group-description">Women in business network</p>
+                                </td>
+                                <td>Nationwide</td>
+                                <td>400/1000</td>
+                                <td>Business</td>
+                                <td>⭐ 4.8</td>
+                                <td><span class="rate-low">0.6%</span></td>
+                                <td><button class="btn btn-small btn-primary">Join</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Lenders Tab -->
+            <div class="tab-pane" id="lenders">
+                <div class="section-header">
+                    <h2>Top Lenders in Rwanda</h2>
+                    <div class="section-actions">
+                        <select class="form-select">
+                            <option>All Regions</option>
+                            <option>Kigali</option>
+                            <option>Southern Province</option>
+                            <option>Northern Province</option>
+                            <option>Eastern Province</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="lenders-grid">
+                    <div class="lender-card">
+                        <div class="lender-header">
+                            <div class="lender-avatar">P</div>
+                            <div class="lender-info">
+                                <h4>Paul Investments</h4>
+                                <p class="lender-tier">Super Tier</p>
+                            </div>
+                        </div>
+                        <div class="lender-details">
+                            <p><strong>📍 Location:</strong> Kigali</p>
+                            <p><strong>⭐ Rating:</strong> 4.9/5.0</p>
+                            <p><strong>💰 Total Lent:</strong> FRw 450M</p>
+                            <p><strong>📈 Success Rate:</strong> 99%</p>
+                        </div>
+                        <button class="btn btn-primary btn-small">View Profile</button>
+                    </div>
+                    <div class="lender-card">
+                        <div class="lender-header">
+                            <div class="lender-avatar">A</div>
+                            <div class="lender-info">
+                                <h4>Angelique Microfinance</h4>
+                                <p class="lender-tier">Premium Tier</p>
+                            </div>
+                        </div>
+                        <div class="lender-details">
+                            <p><strong>📍 Location:</strong> Huye</p>
+                            <p><strong>⭐ Rating:</strong> 4.8/5.0</p>
+                            <p><strong>💰 Total Lent:</strong> FRw 320M</p>
+                            <p><strong>📈 Success Rate:</strong> 98%</p>
+                        </div>
+                        <button class="btn btn-primary btn-small">View Profile</button>
+                    </div>
+                    <div class="lender-card">
+                        <div class="lender-header">
+                            <div class="lender-avatar">J</div>
+                            <div class="lender-info">
+                                <h4>Jean Lending Services</h4>
+                                <p class="lender-tier">Super Tier</p>
+                            </div>
+                        </div>
+                        <div class="lender-details">
+                            <p><strong>📍 Location:</strong> Musanze</p>
+                            <p><strong>⭐ Rating:</strong> 4.7/5.0</p>
+                            <p><strong>💰 Total Lent:</strong> FRw 380M</p>
+                            <p><strong>📈 Success Rate:</strong> 97%</p>
+                        </div>
+                        <button class="btn btn-primary btn-small">View Profile</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculator Tab -->
+            <div class="tab-pane" id="calculator">
+                <div class="calculator-section">
+                    <h2>Rwandan Franc (FRw) Loan Calculator</h2>
+                    <div class="calculator-grid">
+                        <div class="calculator-inputs">
+                            <div class="form-group">
+                                <label for="rwandaAmount">Loan Amount (FRw)</label>
+                                <input type="range" id="rwandaAmount" min="1000" max="20000000" value="500000" class="slider">
+                                <div class="slider-labels">
+                                    <span>FRw 1,000</span>
+                                    <span id="rwandaAmountDisplay">FRw 500,000</span>
+                                    <span>FRw 20,000,000</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="rwandaTier">Your Tier</label>
+                                <select id="rwandaTier" class="form-select">
+                                    <option value="basic">Basic (max FRw 1,500,000)</option>
+                                    <option value="premium">Premium (max FRw 5,000,000)</option>
+                                    <option value="super" selected>Super (max FRw 20,000,000)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="rwandaCategory">Category</label>
+                                <select id="rwandaCategory" class="form-select">
+                                    <option value="transport">🚌 Transport</option>
+                                    <option value="data">📱 Data & Airtime</option>
+                                    <option value="agriculture">🌾 Agriculture Inputs</option>
+                                    <option value="education">🎓 Education</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary" id="calculateRwanda">Calculate</button>
+                        </div>
+                        <div class="calculator-results">
+                            <h3>Repayment Summary</h3>
+                            <div class="result-item">
+                                <span>Principal:</span>
+                                <strong id="rwandaPrincipal">FRw 500,000</strong>
+                            </div>
+                            <div class="result-item">
+                                <span>Interest (10% weekly):</span>
+                                <strong id="rwandaInterest">FRw 50,000</strong>
+                            </div>
+                            <div class="result-item">
+                                <span>Total Due (7 days):</span>
+                                <strong id="rwandaTotal">FRw 550,000</strong>
+                            </div>
+                            <div class="result-item">
+                                <span>Daily Payment:</span>
+                                <strong id="rwandaDaily">FRw 78,571</strong>
+                            </div>
+                            <div class="result-item warning">
+                                <span>Penalty after Day 7:</span>
+                                <strong>5% daily on balance</strong>
+                            </div>
+                            <div class="currency-conversion">
+                                <h4>Currency Conversion</h4>
+                                <p>FRw 500,000 ≈ $400 USD (approx)</p>
+                                <p>Based on current exchange rates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Tab -->
+            <div class="tab-pane" id="contact">
+                <div class="contact-section">
+                    <h2>Contact Pesewa.com Rwanda</h2>
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <h3>📞 Rwanda Office</h3>
+                            <p><strong>Address:</strong> 456 Innovation Street, Kigali, Rwanda</p>
+                            <p><strong>Phone:</strong> +250 791 590 801</p>
+                            <p><strong>Email:</strong> rwanda@pesewa.com</p>
+                            <p><strong>Hours:</strong> Mon-Fri, 8:00 AM - 5:00 PM CAT</p>
+                            
+                            <h3>🌐 Regional Offices</h3>
+                            <p><strong>Huye:</strong> +250 788 123 456</p>
+                            <p><strong>Musanze:</strong> +250 789 456 789</p>
+                            <p><strong>Rubavu:</strong> +250 787 987 654</p>
+                        </div>
+                        <div class="contact-form">
+                            <h3>📧 Send Message to Rwanda Team</h3>
+                            <form id="rwandaContactForm">
+                                <div class="form-group">
+                                    <label for="contactName">Your Name</label>
+                                    <input type="text" id="contactName" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactEmail">Email</label>
+                                    <input type="email" id="contactEmail" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactSubject">Subject</label>
+                                    <select id="contactSubject" class="form-control" required>
+                                        <option value="">Select subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="support">Technical Support</option>
+                                        <option value="groups">Group Registration</option>
+                                        <option value="partnership">Partnership</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactMessage">Message</label>
+                                    <textarea id="contactMessage" class="form-control" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pesewa.com Rwanda</h3>
+                <p>Emergency micro-lending in trusted Rwandan circles.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">📘 Facebook Rwanda</a>
+                    <a href="#" class="social-link">🐦 Twitter Rwanda</a>
+                    <a href="#" class="social-link">📸 Instagram Rwanda</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../qa.html">Q&A</a></li>
+                    <li><a href="../contact.html">Contact Global</a></li>
+                    <li><a href="../subscriptions.html">Subscription Plans</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Rwanda Resources</h3>
+                <ul>
+                    <li><a href="#">National Bank of Rwanda Regulations</a></li>
+                    <li><a href="#">MTN Mobile Money Rwanda Guide</a></li>
+                    <li><a href="#">Airtel Money Rwanda Guide</a></li>
+                    <li><a href="#">Rwandan Groups Directory</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Rwanda Compliance</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Pesewa.com Rwanda. All rights reserved. 🇷🇼</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/utils.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab functionality
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const tabId = this.dataset.tab;
+                    
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    tabPanes.forEach(pane => {
+                        pane.classList.remove('active');
+                        if (pane.id === tabId) {
+                            pane.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // Rwanda calculator
+            const rwandaAmount = document.getElementById('rwandaAmount');
+            const rwandaAmountDisplay = document.getElementById('rwandaAmountDisplay');
+            const rwandaPrincipal = document.getElementById('rwandaPrincipal');
+            const rwandaInterest = document.getElementById('rwandaInterest');
+            const rwandaTotal = document.getElementById('rwandaTotal');
+            const rwandaDaily = document.getElementById('rwandaDaily');
+            const rwandaTier = document.getElementById('rwandaTier');
+
+            function updateRwandaCalculator() {
+                const amount = parseInt(rwandaAmount.value);
+                const interest = amount * 0.10;
+                const total = amount + interest;
+                const daily = total / 7;
+
+                rwandaAmountDisplay.textContent = `FRw ${amount.toLocaleString()}`;
+                rwandaPrincipal.textContent = `FRw ${amount.toLocaleString()}`;
+                rwandaInterest.textContent = `FRw ${interest.toLocaleString()}`;
+                rwandaTotal.textContent = `FRw ${total.toLocaleString()}`;
+                rwandaDaily.textContent = `FRw ${daily.toFixed(0)}`;
+
+                // Update max based on tier
+                const tier = rwandaTier.value;
+                let maxAmount = 20000000;
+                if (tier === 'basic') maxAmount = 1500000;
+                if (tier === 'premium') maxAmount = 5000000;
+                
+                rwandaAmount.max = maxAmount;
+                if (amount > maxAmount) {
+                    rwandaAmount.value = maxAmount;
+                    updateRwandaCalculator();
+                }
+            }
+
+            rwandaAmount.addEventListener('input', updateRwandaCalculator);
+            rwandaTier.addEventListener('change', updateRwandaCalculator);
+            document.getElementById('calculateRwanda').addEventListener('click', updateRwandaCalculator);
+            updateRwandaCalculator();
+
+            // Language selector
+            document.getElementById('languageSelect').addEventListener('change', function() {
+                if (this.value === 'fr' || this.value === 'rw') {
+                    // In a real implementation, this would change the language
+                    alert(`${this.value === 'fr' ? 'French' : 'Kinyarwanda'} language version coming soon!`);
+                    this.value = 'en';
+                }
+            });
+
+            // Contact form
+            document.getElementById('rwandaContactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Message sent to Pesewa.com Rwanda team. We\'ll respond within 24 hours.');
+                this.reset();
+            });
+
+            // Logout
+            document.getElementById('logoutBtn').addEventListener('click', function() {
+                if (confirm('Are you sure you want to logout?')) {
+                    window.location.href = '../../index.html';
+                }
+            });
+
+            // User dropdown
+            const userMenuBtn = document.getElementById('userMenuBtn');
+            const dropdownContent = document.querySelector('.dropdown-content');
+
+            userMenuBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+            });
+
+            window.addEventListener('click', function() {
+                dropdownContent.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
