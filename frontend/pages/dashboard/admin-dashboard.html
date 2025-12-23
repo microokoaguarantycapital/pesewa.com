@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Pesewa.com</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../../assets/css/tables.css">
+    <link rel="stylesheet" href="../../assets/css/forms.css">
+    <link rel="stylesheet" href="../../assets/css/animations.css">
+    <link rel="manifest" href="../../manifest.json">
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/logo.svg">
+</head>
+<body class="dashboard admin-dashboard">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../../assets/images/logo.svg" alt="Pesewa Logo" class="sidebar-logo">
+                <h2>Admin Dashboard</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="../../index.html"><span class="icon">🏠</span> Home</a></li>
+                    <li class="active"><a href="#"><span class="icon">⚙️</span> Admin</a></li>
+                    <li><a href="../blacklist.html"><span class="icon">⚫</span> Blacklist</a></li>
+                    <li><a href="../debt-collectors.html"><span class="icon">🕵️</span> Collectors</a></li>
+                    <li><a href="../groups.html"><span class="icon">👥</span> All Groups</a></li>
+                    <li><a href="../ledger.html"><span class="icon">📒</span> All Ledgers</a></li>
+                    <li><a href="../subscriptions.html"><span class="icon">💰</span> Subscriptions</a></li>
+                    <li><a href="../countries/index.html"><span class="icon">🌍</span> Countries</a></li>
+                    <li><a href="../contact.html"><span class="icon">📞</span> Support</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">A</div>
+                    <div class="user-info">
+                        <span class="user-name">Admin User</span>
+                        <span class="user-role">Platform Admin</span>
+                    </div>
+                </div>
+                <button id="logoutBtn" class="btn-logout">Logout</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h1>Platform Administration</h1>
+                <div class="header-actions">
+                    <div class="notification-bell">🔔 <span class="badge">12</span></div>
+                    <button class="btn btn-primary" onclick="location.href='../blacklist.html'">Manage Blacklist</button>
+                </div>
+            </header>
+
+            <!-- Platform Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-info">
+                        <h3>Total Users</h3>
+                        <p class="stat-value">10,245</p>
+                        <small class="stat-change">+12% this month</small>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-info">
+                        <h3>Total Lent</h3>
+                        <p class="stat-value">₵1.2B</p>
+                        <small class="stat-change">+8% this month</small>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-info">
+                        <h3>Repayment Rate</h3>
+                        <p class="stat-value">99%</p>
+                        <small class="stat-change">0.5% improvement</small>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚫</div>
+                    <div class="stat-info">
+                        <h3>Blacklisted</h3>
+                        <p class="stat-value">45</p>
+                        <small class="stat-change">-3 this week</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pending Actions -->
+            <section class="dashboard-section">
+                <h2>Pending Moderation Actions</h2>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Details</th>
+                                <th>Submitted By</th>
+                                <th>Date</th>
+                                <th>Priority</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="badge badge-alert">Blacklist</span></td>
+                                <td>John Doe defaulted ₵5,000 for 60+ days</td>
+                                <td>Sarah Lender</td>
+                                <td>2024-03-22</td>
+                                <td><span class="priority high">High</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-success">Approve</button>
+                                    <button class="btn btn-sm btn-alert">Review</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-warning">Rating Appeal</span></td>
+                                <td>Mary Borrower appeals 1-star rating</td>
+                                <td>Mary Borrower</td>
+                                <td>2024-03-21</td>
+                                <td><span class="priority medium">Medium</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-success">Approve</button>
+                                    <button class="btn btn-sm btn-alert">Review</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-info">Group Create</span></td>
+                                <td>New group "Tech Professionals Ghana"</td>
+                                <td>Kwame Admin</td>
+                                <td>2024-03-20</td>
+                                <td><span class="priority low">Low</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-success">Approve</button>
+                                    <button class="btn btn-sm btn-alert">Review</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Recent Blacklist Activity -->
+            <section class="dashboard-section">
+                <h2>Recent Blacklist Activity</h2>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Amount</th>
+                                <th>Days Overdue</th>
+                                <th>Lender</th>
+                                <th>Group</th>
+                                <th>Blacklisted Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>₵5,000</td>
+                                <td>65</td>
+                                <td>Sarah Lender</td>
+                                <td>Family Trust</td>
+                                <td>2024-03-15</td>
+                                <td><span class="status alert">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>₵2,500</td>
+                                <td>45</td>
+                                <td>Mike Lender</td>
+                                <td>Church Group</td>
+                                <td>2024-03-10</td>
+                                <td><span class="status warning">Pending Clearance</span></td>
+                            </tr>
+                            <tr>
+                                <td>Robert Brown</td>
+                                <td>₵1,200</td>
+                                <td>70</td>
+                                <td>Anna Lender</td>
+                                <td>Business Network</td>
+                                <td>2024-03-05</td>
+                                <td><span class="status alert">Active</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- System Controls -->
+            <section class="dashboard-section">
+                <h2>System Controls</h2>
+                <div class="controls-grid">
+                    <div class="control-card">
+                        <h3>Platform Settings</h3>
+                        <div class="control-item">
+                            <label>Interest Rate (%)</label>
+                            <input type="number" value="10" min="1" max="20" class="form-control">
+                        </div>
+                        <div class="control-item">
+                            <label>Penalty Rate (% daily)</label>
+                            <input type="number" value="5" min="1" max="10" class="form-control">
+                        </div>
+                        <div class="control-item">
+                            <label>Default Period (days)</label>
+                            <input type="number" value="60" min="30" max="90" class="form-control">
+                        </div>
+                        <button class="btn btn-primary">Update Settings</button>
+                    </div>
+
+                    <div class="control-card">
+                        <h3>User Management</h3>
+                        <div class="control-item">
+                            <label>Search User</label>
+                            <input type="text" placeholder="Enter name or ID" class="form-control">
+                        </div>
+                        <div class="control-item">
+                            <label>Action</label>
+                            <select class="form-select">
+                                <option>Adjust Rating</option>
+                                <option>Remove Blacklist</option>
+                                <option>Suspend Account</option>
+                                <option>Reset Password</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary">Execute Action</button>
+                    </div>
+
+                    <div class="control-card">
+                        <h3>Reports</h3>
+                        <button class="btn btn-secondary">Generate Monthly Report</button>
+                        <button class="btn btn-secondary">Export User Data</button>
+                        <button class="btn btn-secondary">View Audit Log</button>
+                        <button class="btn btn-secondary">Backup Database</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../../assets/js/utils.js"></script>
+    <script src="../../assets/js/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Logout
+            document.getElementById('logoutBtn').addEventListener('click', function() {
+                if (confirm('Are you sure you want to logout?')) {
+                    window.location.href = '../../index.html';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

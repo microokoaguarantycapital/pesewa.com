@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt Collectors - Pesewa.com</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/tables.css">
+    <link rel="stylesheet" href="../assets/css/forms.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+</head>
+<body class="page-debt-collectors">
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.svg" alt="Pesewa Logo" class="logo">
+                    <span class="brand-name">Pesewa.com</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./dashboard/borrower-dashboard.html">Dashboard</a></li>
+                <li><a href="./lending.html">Lend</a></li>
+                <li><a href="./borrowing.html">Borrow</a></li>
+                <li><a href="./groups.html">Groups</a></li>
+                <li><a href="./blacklist.html">Blacklist</a></li>
+                <li class="active"><a href="./debt-collectors.html">Collectors</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="user-dropdown">
+                    <button class="btn btn-outline" id="userMenuBtn">My Account</button>
+                    <div class="dropdown-content">
+                        <a href="./dashboard/borrower-dashboard.html">Borrower Dashboard</a>
+                        <a href="./dashboard/lender-dashboard.html">Lender Dashboard</a>
+                        <a href="./dashboard/admin-dashboard.html">Admin Dashboard</a>
+                        <hr>
+                        <button id="logoutBtn" class="btn-logout">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <div class="page-header">
+            <h1>Verified Debt Collectors</h1>
+            <p>Contact our network of 200+ verified debt collectors across Africa. Only for loans in default (60+ days overdue).</p>
+            <div class="header-notice">
+                <div class="notice-card warning">
+                    <strong>⚠️ Important Notice:</strong> Debt collectors are only for defaulted loans (60+ days overdue). Contact collectors directly. Pesewa.com does not handle collections.
+                </div>
+            </div>
+        </div>
+
+        <div class="collectors-controls">
+            <div class="controls-grid">
+                <div class="search-box">
+                    <input type="text" id="searchCollector" placeholder="Search by name, country, or city..." class="form-control">
+                    <button class="btn-search">🔍</button>
+                </div>
+                <div class="filter-controls">
+                    <select id="countryFilter" class="form-select">
+                        <option value="">All Countries</option>
+                        <option value="gh">Ghana</option>
+                        <option value="ke">Kenya</option>
+                        <option value="ng">Nigeria</option>
+                        <option value="tz">Tanzania</option>
+                        <option value="ug">Uganda</option>
+                        <option value="za">South Africa</option>
+                        <option value="rw">Rwanda</option>
+                        <option value="bi">Burundi</option>
+                        <option value="so">Somalia</option>
+                        <option value="ss">South Sudan</option>
+                        <option value="et">Ethiopia</option>
+                        <option value="cd">Congo</option>
+                    </select>
+                    <select id="serviceFilter" class="form-select">
+                        <option value="">All Services</option>
+                        <option value="legal">Legal Recovery</option>
+                        <option value="field">Field Collection</option>
+                        <option value="negotiation">Debt Negotiation</option>
+                        <option value="skip-tracing">Skip Tracing</option>
+                    </select>
+                    <select id="ratingFilter" class="form-select">
+                        <option value="">All Ratings</option>
+                        <option value="5">⭐ 5.0</option>
+                        <option value="4">⭐ 4.0+</option>
+                        <option value="3">⭐ 3.0+</option>
+                    </select>
+                    <button class="btn btn-primary" id="applyFilters">Apply Filters</button>
+                    <button class="btn btn-secondary" id="resetFilters">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="collectors-stats">
+            <div class="stat-card">
+                <div class="stat-icon">🕵️</div>
+                <div class="stat-details">
+                    <h3>Total Collectors</h3>
+                    <p class="stat-value">200+</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🌍</div>
+                <div class="stat-details">
+                    <h3>Countries Covered</h3>
+                    <p class="stat-value">12</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">💰</div>
+                <div class="stat-details">
+                    <h3>Avg. Recovery Rate</h3>
+                    <p class="stat-value">78%</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-details">
+                    <h3>Avg. Rating</h3>
+                    <p class="stat-value">4.3/5.0</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="collectors-container">
+            <div class="collectors-grid">
+                <!-- Collector 1 -->
+                <div class="collector-card">
+                    <div class="collector-header">
+                        <div class="collector-avatar">
+                            <img src="../assets/images/icons/collector1.svg" alt="Collector">
+                        </div>
+                        <div class="collector-info">
+                            <h3>Kwame Recovery Agency</h3>
+                            <div class="collector-rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating">4.8/5.0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collector-details">
+                        <div class="detail-item">
+                            <span class="label">📍 Location:</span>
+                            <span class="value">Accra, Ghana</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">📧 Email:</span>
+                            <span class="value">kwame@recovery.gh</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">📞 Phone:</span>
+                            <span class="value">+233 24 111 2222</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">🕒 Response Time:</span>
+                            <span class="value">2-4 hours</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">🎯 Services:</span>
+                            <span class="value">Legal Recovery, Field Collection</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">💰 Fee:</span>
+                            <span class="value">25% of recovered amount</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">📊 Success Rate:</span>
+                            <span class="value success">85%</span>
+                        </div>
+                    </div>
+                    <div class="collector-actions">
+                        <button class="btn btn-primary btn-small contact-btn">Contact</button>
+                        <button class="btn btn-secondary btn-small view-btn">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Collector 2 -->
+                <div class="collector-card">
+                    <div class="collector-header">
+                        <div class="collector-avatar">
+                            <img src="../assets/images/icons/collector2.svg" alt="Collector">
+                        </div>
+                        <div class="collector-info">
+                            <h3>Nairobi Debt Solutions</h3>
+                            <div class="collector-rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating">4.9/5.0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collector-details">
+                        <div class="detail-item">
+                            <span class="label">📍 Location:</span>
+                            <span class="value">Nairobi, Kenya</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">📧 Email:</span>
+                            <span class="value">info@nairobidr.co.ke</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">📞 Phone:</span>
+                            <span class="value">+254 722 333 444</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">🕒 Response Time:</span>
+                            <span class="value">1-2 hours</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">🎯 Services:</span>
+                            <span class="value">Skip Tracing, Negotiation</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">💰 Fee:</span>
+                            <span class="value">20% of recovered amount</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">📊 Success Rate:</span>
+                            <span class="value success">92%</span>
+                        </div>
+                    </div>
+                    <div class="collector-actions">
+                        <button class="btn btn-primary btn-small contact-btn">Contact</button>
+                        <button class="btn btn-secondary btn-small view-btn">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Collector 3 -->
+                <div class="collector-card">
+                    <div class="collector-header">
+                        <div class="collector-avatar">
+                            <img src="../assets/images/icons/collector3.svg" alt="Collector">
+                        </div>
+                        <div class="collector-info">
+                            <h3>Lagos Recovery Partners</h3>
+                            <div class="collector-rating">
+                                <span class="stars">⭐⭐⭐⭐</span>
+                                <span class="rating">4.2/5.0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collector-details">
+                        <div class="detail-item">
+                            <span class="label">📍 Location:</span>
+                            <span class="value">Lagos, Nigeria</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">📧 Email:</span>
+                            <span class="value">recovery@lagosrp.ng</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">📞 Phone:</span>
+                            <span class="value">+234 803 555 6666</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">🕒 Response Time:</span>
+                            <span class="value">4-6 hours</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">🎯 Services:</span>
+                            <span class="value">Field Collection, Legal</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">💰 Fee:</span>
+                            <span class="value">30% of recovered amount</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">📊 Success Rate:</span>
+                            <span class="value">75%</span>
+                        </div>
+                    </div>
+                    <div class="collector-actions">
+                        <button class="btn btn-primary btn-small contact-btn">Contact</button>
+                        <button class="btn btn-secondary btn-small view-btn">View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Collector 4 -->
+                <div class="collector-card">
+                    <div class="collector-header">
+                        <div class="collector-avatar">
+                            <img src="../assets/images/icons/collector4.svg" alt="Collector">
+                        </div>
+                        <div class="collector-info">
+                            <h3>Dar es Salaam Collectors</h3>
+                            <div class="collector-rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating">4.7/5.0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collector-details">
+                        <div class="detail-item">
+                            <span class="label">📍 Location:</span>
+                            <span class="value">Dar es Salaam, Tanzania</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">📧 Email:</span>
+                            <span class="value">contact@darcollectors.co.tz</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">📞 Phone:</span>
+                            <span class="value">+255 765 888 999</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">🕒 Response Time:</span>
+                            <span class="value">3-5 hours</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">🎯 Services:</span>
+                            <span class="value">All Services</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">💰 Fee:</span>
+                            <span class="value">22% of recovered amount</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">📊 Success Rate:</span>
+                            <span class="value success">88%</span>
+                        </div>
+                    </div>
+                    <div class="collector-actions">
+                        <button class="btn btn-primary btn-small contact-btn">Contact</button>
+                        <button class="btn btn-secondary btn-small view-btn">View Profile</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <div class="table-header">
+                    <h2>Complete Collector List</h2>
+                    <div class="table-actions">
+                        <button class="btn btn-secondary" id="exportCollectors">Export List</button>
+                        <button class="btn btn-primary" id="recommendCollector">Recommend a Collector</button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="data-table collectors-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Country</th>
+                                <th>City</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Services</th>
+                                <th>Fee %</th>
+                                <th>Rating</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#DC-001</td>
+                                <td>Kwame Recovery Agency</td>
+                                <td>Ghana</td>
+                                <td>Accra</td>
+                                <td>kwame@recovery.gh</td>
+                                <td>+233 24 111 2222</td>
+                                <td>Legal, Field</td>
+                                <td>25%</td>
+                                <td>⭐ 4.8</td>
+                                <td><button class="btn-action contact">Contact</button></td>
+                            </tr>
+                            <tr>
+                                <td>#DC-002</td>
+                                <td>Nairobi Debt Solutions</td>
+                                <td>Kenya</td>
+                                <td>Nairobi</td>
+                                <td>info@nairobidr.co.ke</td>
+                                <td>+254 722 333 444</td>
+                                <td>Skip Tracing</td>
+                                <td>20%</td>
+                                <td>⭐ 4.9</td>
+                                <td><button class="btn-action contact">Contact</button></td>
+                            </tr>
+                            <tr>
+                                <td>#DC-003</td>
+                                <td>Lagos Recovery Partners</td>
+                                <td>Nigeria</td>
+                                <td>Lagos</td>
+                                <td>recovery@lagosrp.ng</td>
+                                <td>+234 803 555 6666</td>
+                                <td>Field, Legal</td>
+                                <td>30%</td>
+                                <td>⭐ 4.2</td>
+                                <td><button class="btn-action contact">Contact</button></td>
+                            </tr>
+                            <tr>
+                                <td>#DC-004</td>
+                                <td>Dar es Salaam Collectors</td>
+                                <td>Tanzania</td>
+                                <td>Dar es Salaam</td>
+                                <td>contact@darcollectors.co.tz</td>
+                                <td>+255 765 888 999</td>
+                                <td>All Services</td>
+                                <td>22%</td>
+                                <td>⭐ 4.7</td>
+                                <td><button class="btn-action contact">Contact</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-footer">
+                    <div class="pagination">
+                        <button class="btn-pagination prev" disabled>Previous</button>
+                        <span class="page-numbers">
+                            <button class="page-btn active">1</button>
+                            <button class="page-btn">2</button>
+                            <button class="page-btn">3</button>
+                            <span>...</span>
+                            <button class="page-btn">20</button>
+                        </span>
+                        <button class="btn-pagination next">Next</button>
+                    </div>
+                    <div class="table-summary">
+                        Showing 4 of 200+ collectors
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Modal -->
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Contact Debt Collector</h2>
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactCollectorForm">
+                        <div class="form-group">
+                            <label for="collectorName">Collector</label>
+                            <input type="text" id="collectorName" class="form-control" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="yourName">Your Name</label>
+                            <input type="text" id="yourName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="yourEmail">Your Email</label>
+                            <input type="email" id="yourEmail" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="yourPhone">Your Phone</label>
+                            <input type="tel" id="yourPhone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loanReference">Loan Reference (Optional)</label>
+                            <input type="text" id="loanReference" class="form-control" placeholder="e.g., #LN-001">
+                        </div>
+                        <div class="form-group">
+                            <label for="debtAmount">Debt Amount (₵)</label>
+                            <input type="number" id="debtAmount" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" rows="4" required placeholder="Brief description of the debt situation..."></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                            <button type="button" class="btn btn-secondary" id="cancelContact">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pesewa.com</h3>
+                <p>Emergency micro-lending in trusted circles across Africa.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./qa.html">Q&A</a></li>
+                    <li><a href="./blacklist.html">Blacklist</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Collector Agreement</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Pesewa.com. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/collectors.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Filter functionality
+            const applyFiltersBtn = document.getElementById('applyFilters');
+            const resetFiltersBtn = document.getElementById('resetFilters');
+            const searchInput = document.getElementById('searchCollector');
+            const countryFilter = document.getElementById('countryFilter');
+            const serviceFilter = document.getElementById('serviceFilter');
+            const ratingFilter = document.getElementById('ratingFilter');
+            const collectorCards = document.querySelectorAll('.collector-card');
+            const tableRows = document.querySelectorAll('.collectors-table tbody tr');
+
+            function filterCollectors() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const countryValue = countryFilter.value;
+                const serviceValue = serviceFilter.value;
+                const ratingValue = ratingFilter.value;
+
+                // Filter cards
+                collectorCards.forEach(card => {
+                    const name = card.querySelector('h3').textContent.toLowerCase();
+                    const location = card.querySelector('.detail-item:nth-child(1) .value').textContent.toLowerCase();
+                    const services = card.querySelector('.detail-item:nth-child(5) .value').textContent.toLowerCase();
+                    const rating = parseFloat(card.querySelector('.rating').textContent);
+
+                    let matches = true;
+
+                    // Search term
+                    if (searchTerm && !name.includes(searchTerm) && !location.includes(searchTerm)) {
+                        matches = false;
+                    }
+
+                    // Country filter
+                    if (countryValue) {
+                        if (!location.includes(countryValue)) matches = false;
+                    }
+
+                    // Service filter
+                    if (serviceValue) {
+                        if (!services.includes(serviceValue)) matches = false;
+                    }
+
+                    // Rating filter
+                    if (ratingValue && rating < parseFloat(ratingValue)) {
+                        matches = false;
+                    }
+
+                    card.style.display = matches ? 'block' : 'none';
+                });
+
+                // Filter table rows
+                tableRows.forEach(row => {
+                    const cells = row.querySelectorAll('td');
+                    const name = cells[1].textContent.toLowerCase();
+                    const country = cells[2].textContent.toLowerCase();
+                    const services = cells[6].textContent.toLowerCase();
+                    const rating = parseFloat(cells[8].textContent.split(' ')[1]);
+
+                    let matches = true;
+
+                    // Search term
+                    if (searchTerm && !name.includes(searchTerm) && !country.includes(searchTerm)) {
+                        matches = false;
+                    }
+
+                    // Country filter
+                    if (countryValue && !country.includes(countryValue)) {
+                        matches = false;
+                    }
+
+                    // Service filter
+                    if (serviceValue && !services.includes(serviceValue)) {
+                        matches = false;
+                    }
+
+                    // Rating filter
+                    if (ratingValue && rating < parseFloat(ratingValue)) {
+                        matches = false;
+                    }
+
+                    row.style.display = matches ? '' : 'none';
+                });
+            }
+
+            applyFiltersBtn.addEventListener('click', filterCollectors);
+            resetFiltersBtn.addEventListener('click', function() {
+                searchInput.value = '';
+                countryFilter.value = '';
+                serviceFilter.value = '';
+                ratingFilter.value = '';
+                collectorCards.forEach(card => card.style.display = 'block');
+                tableRows.forEach(row => row.style.display = '');
+            });
+
+            searchInput.addEventListener('keyup', function(e) {
+                if (e.key === 'Enter') filterCollectors();
+            });
+
+            // Contact modal
+            const contactModal = document.getElementById('contactModal');
+            const closeModal = document.querySelector('.close-modal');
+            const cancelContact = document.getElementById('cancelContact');
+            const contactButtons = document.querySelectorAll('.contact-btn, .btn-action.contact');
+
+            contactButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const collectorName = this.closest('.collector-card') 
+                        ? this.closest('.collector-card').querySelector('h3').textContent
+                        : this.closest('tr').querySelector('td:nth-child(2)').textContent;
+                    
+                    document.getElementById('collectorName').value = collectorName;
+                    contactModal.style.display = 'block';
+                });
+            });
+
+            closeModal.addEventListener('click', function() {
+                contactModal.style.display = 'none';
+            });
+
+            cancelContact.addEventListener('click', function() {
+                contactModal.style.display = 'none';
+            });
+
+            window.addEventListener('click', function(e) {
+                if (e.target === contactModal) {
+                    contactModal.style.display = 'none';
+                }
+            });
+
+            // Contact form submission
+            document.getElementById('contactCollectorForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Message sent to debt collector. They will contact you within 24 hours.');
+                this.reset();
+                contactModal.style.display = 'none';
+            });
+
+            // Export collectors
+            document.getElementById('exportCollectors').addEventListener('click', function() {
+                alert('Collector list exported as CSV file.');
+            });
+
+            // Recommend collector
+            document.getElementById('recommendCollector').addEventListener('click', function() {
+                alert('Thank you for wanting to recommend a collector. Please email recommendations to collectors@pesewa.com');
+            });
+
+            // View profile buttons
+            document.querySelectorAll('.view-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const collectorName = this.closest('.collector-card').querySelector('h3').textContent;
+                    alert(`Viewing full profile for ${collectorName}. In a full implementation, this would open a detailed profile page.`);
+                });
+            });
+
+            // Logout
+            document.getElementById('logoutBtn').addEventListener('click', function() {
+                if (confirm('Are you sure you want to logout?')) {
+                    window.location.href = '../index.html';
+                }
+            });
+
+            // User dropdown
+            const userMenuBtn = document.getElementById('userMenuBtn');
+            const dropdownContent = document.querySelector('.dropdown-content');
+
+            userMenuBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+            });
+
+            window.addEventListener('click', function() {
+                dropdownContent.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

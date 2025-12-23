@@ -1,0 +1,131 @@
+{
+  "categories": [
+    {
+      "id": "fare",
+      "name": "PesewaFare",
+      "icon": "🚌",
+      "tagline": "Move on, don't stall—borrow for your journey.",
+      "description": "Transportation costs for emergencies like work commute, interviews, or family visits.",
+      "color": "#0A65FC",
+      "averageLoan": 1500,
+      "repaymentRate": 98.5
+    },
+    {
+      "id": "data",
+      "name": "PesewaData",
+      "icon": "📱",
+      "tagline": "Stay connected, stay informed—borrow when your bundle runs out.",
+      "description": "Mobile data, airtime, and internet bundles for work, school, or staying connected.",
+      "color": "#20BF6F",
+      "averageLoan": 800,
+      "repaymentRate": 99.2
+    },
+    {
+      "id": "cookinggas",
+      "name": "PesewaCookingGas",
+      "icon": "🔥",
+      "tagline": "Cook with confidence—borrow when your gas is low.",
+      "description": "Cooking gas refills for households when budget runs out before payday.",
+      "color": "#FF4401",
+      "averageLoan": 2500,
+      "repaymentRate": 97.8
+    },
+    {
+      "id": "food",
+      "name": "PesewaFood",
+      "icon": "🍲",
+      "tagline": "Don't sleep hungry when paycheck is delayed—borrow and eat today.",
+      "description": "Emergency food supplies, groceries, or meal costs during financial gaps.",
+      "color": "#FF9F1C",
+      "averageLoan": 1200,
+      "repaymentRate": 99.0
+    },
+    {
+      "id": "credo",
+      "name": "Pesewacredo",
+      "icon": "🛠️",
+      "tagline": "Fix it fast—borrow for urgent repairs or tools.",
+      "description": "Urgent repairs for homes, appliances, vehicles, or essential tools for work.",
+      "color": "#6B6B6B",
+      "averageLoan": 3500,
+      "repaymentRate": 96.5
+    },
+    {
+      "id": "waterbill",
+      "name": "PesewaWaterBill",
+      "icon": "💧",
+      "tagline": "Stay hydrated—borrow for water needs or bills.",
+      "description": "Water bills, borehole maintenance, or emergency water supply costs.",
+      "color": "#0A65FC",
+      "averageLoan": 1800,
+      "repaymentRate": 98.7
+    },
+    {
+      "id": "fuel",
+      "name": "PesewaBikeCarTuktukFuel",
+      "icon": "⛽",
+      "tagline": "Keep moving—borrow for fuel, no matter your ride.",
+      "description": "Fuel for motorcycles, cars, tuktuks, or generators to keep income flowing.",
+      "color": "#333333",
+      "averageLoan": 2000,
+      "repaymentRate": 97.9
+    },
+    {
+      "id": "repair",
+      "name": "PesewaBikeCarTuktukRepair",
+      "icon": "🔧",
+      "tagline": "Fix it quick—borrow for minor repairs and keep going.",
+      "description": "Minor vehicle repairs to maintain transportation for work or essential travel.",
+      "color": "#6B6B6B",
+      "averageLoan": 4500,
+      "repaymentRate": 96.2
+    },
+    {
+      "id": "medicine",
+      "name": "PesewaMedicine",
+      "icon": "💊",
+      "tagline": "Health first—borrow for urgent medicines.",
+      "description": "Emergency medical supplies, prescriptions, or basic healthcare costs.",
+      "color": "#FF4401",
+      "averageLoan": 2800,
+      "repaymentRate": 99.5
+    },
+    {
+      "id": "electricity",
+      "name": "PesewaElectricityTokens",
+      "icon": "💡",
+      "tagline": "Stay lit, stay powered—borrow tokens when you need it.",
+      "description": "Electricity token purchases, bill payments, or emergency power solutions.",
+      "color": "#FF9F1C",
+      "averageLoan": 2200,
+      "repaymentRate": 98.9
+    },
+    {
+      "id": "schoolfees",
+      "name": "Pesewaschoolfees",
+      "icon": "🎓",
+      "tagline": "Education first—urgent school fees.",
+      "description": "Emergency school fees, supplies, or educational expenses for children.",
+      "color": "#0A65FC",
+      "averageLoan": 5000,
+      "repaymentRate": 99.1
+    },
+    {
+      "id": "tvsubscription",
+      "name": "PesewaTVSubscription",
+      "icon": "📺",
+      "tagline": "Stay informed—TV subscription.",
+      "description": "TV subscription renewals, decoder payments, or media access for information.",
+      "color": "#20BF6F",
+      "averageLoan": 900,
+      "repaymentRate": 98.3
+    }
+  ],
+  "stats": {
+    "totalCategories": 12,
+    "mostPopular": "PesewaFood",
+    "highestRepaymentRate": "PesewaMedicine",
+    "averageLoanSize": 2350,
+    "overallRepaymentRate": 98.4
+  }
+}

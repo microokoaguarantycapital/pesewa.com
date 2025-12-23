@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesewa.com - Nigeria Dashboard</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../../assets/css/tables.css">
+    <link rel="stylesheet" href="../../assets/css/forms.css">
+    <link rel="manifest" href="../../manifest.json">
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/logo.svg">
+</head>
+<body class="country-page">
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../../index.html" class="logo">
+                    <img src="../../assets/images/logo.svg" alt="Pesewa Logo" width="40" height="40">
+                    <span>Pesewa.com</span>
+                </a>
+                <div class="nav-links">
+                    <a href="../../index.html">Home</a>
+                    <a href="../dashboard/lender-dashboard.html">Dashboard</a>
+                    <a href="../groups.html">Groups</a>
+                    <a href="../lending.html">Lend</a>
+                    <a href="../borrowing.html">Borrow</a>
+                    <a href="../countries/index.html">Countries</a>
+                    <a href="../subscriptions.html">Subscriptions</a>
+                    <a href="../../index.html#auth" class="btn-auth">Login</a>
+                </div>
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="country-hero">
+            <div class="country-flag">
+                <img src="../../assets/images/flags/ng.svg" alt="Nigeria Flag" width="80" height="60">
+                <h1>Nigeria Dashboard</h1>
+            </div>
+            <p class="country-description">
+                Welcome to the Nigeria Pesewa community. Join trusted groups, lend or borrow in Nigerian Naira (NGN).
+                <br>Current rate: 1 USD ≈ 1,500 NGN
+            </p>
+        </div>
+
+        <div class="dashboard-grid">
+            <section class="dashboard-card overview-card">
+                <h2><span class="icon">📊</span> Country Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <h3>Active Groups</h3>
+                        <p class="number">845</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Registered Lenders</h3>
+                        <p class="number">4,237</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Active Borrowers</h3>
+                        <p class="number">21,584</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Total Lent (NGN)</h3>
+                        <p class="number">8.7B</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Repayment Rate</h3>
+                        <p class="number">98.3%</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Default Rate</h3>
+                        <p class="number">1.7%</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-card calculator-card">
+                <h2><span class="icon">🧮</span> Loan Calculator (NGN)</h2>
+                <div class="calculator">
+                    <div class="input-group">
+                        <label for="amount">Loan Amount (NGN)</label>
+                        <input type="number" id="amount" min="1000" max="5000000" step="1000" placeholder="e.g., 50000">
+                    </div>
+                    <div class="input-group">
+                        <label for="tier">Select Tier</label>
+                        <select id="tier">
+                            <option value="basic">Basic (≤ 1,500 NGN/week)</option>
+                            <option value="premium">Premium (≤ 5,000 NGN/week)</option>
+                            <option value="super">Super (≤ 20,000 NGN/week)</option>
+                        </select>
+                    </div>
+                    <button id="calculate" class="btn btn-primary">Calculate</button>
+                    <div class="results">
+                        <h4>Loan Breakdown</h4>
+                        <p>Principal: <span id="principal">0</span> NGN</p>
+                        <p>Weekly Interest (10%): <span id="interest">0</span> NGN</p>
+                        <p>Total Repayable: <span id="total">0</span> NGN</p>
+                        <p>Daily Payment (7 days): <span id="daily">0</span> NGN/day</p>
+                        <p class="note">Penalty: 5% daily after 7 days until cleared.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-card groups-card">
+                <h2><span class="icon">👥</span> Groups in Nigeria</h2>
+                <div class="search-bar">
+                    <input type="text" id="groupSearch" placeholder="Search groups by name, location, or admin...">
+                    <button class="btn btn-secondary">Search</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="groups-table">
+                        <thead>
+                            <tr>
+                                <th>Group Name</th>
+                                <th>Admin</th>
+                                <th>Members</th>
+                                <th>Location</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lagos Trust Circle</td>
+                                <td>Chinedu Okoro</td>
+                                <td>567/1000</td>
+                                <td>Lagos</td>
+                                <td><a href="#" class="btn btn-small">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>Abuja Professionals</td>
+                                <td>Aisha Bello</td>
+                                <td>345/1000</td>
+                                <td>Abuja</td>
+                                <td><a href="#" class="btn btn-small">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>Port Harcourt Traders</td>
+                                <td>Emeka Nwachukwu</td>
+                                <td>278/1000</td>
+                                <td>Port Harcourt</td>
+                                <td><a href="#" class="btn btn-small">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>Kano Business Network</td>
+                                <td>Musa Ibrahim</td>
+                                <td>432/1000</td>
+                                <td>Kano</td>
+                                <td><a href="#" class="btn btn-small">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>Ibadan Community</td>
+                                <td>Folake Adeyemi</td>
+                                <td>389/1000</td>
+                                <td>Ibadan</td>
+                                <td><a href="#" class="btn btn-small">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <a href="../groups.html?country=nigeria" class="btn btn-outline">View All Groups</a>
+            </section>
+
+            <section class="dashboard-card lenders-card">
+                <h2><span class="icon">🤝</span> Top Lenders in Nigeria</h2>
+                <div class="table-responsive">
+                    <table class="lenders-table">
+                        <thead>
+                            <tr>
+                                <th>Lender Name</th>
+                                <th>Subscription</th>
+                                <th>Active Loans</th>
+                                <th>Total Lent (NGN)</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>GTBank Microfinance</td>
+                                <td><span class="badge badge-super">Super</span></td>
+                                <td>124</td>
+                                <td>2,850,000,000</td>
+                                <td>⭐ 4.9</td>
+                            </tr>
+                            <tr>
+                                <td>Zenith Trust Group</td>
+                                <td><span class="badge badge-premium">Premium</span></td>
+                                <td>78</td>
+                                <td>1,650,000,000</td>
+                                <td>⭐ 4.7</td>
+                            </tr>
+                            <tr>
+                                <td>Family First Nigeria</td>
+                                <td><span class="badge badge-basic">Basic</span></td>
+                                <td>45</td>
+                                <td>920,000,000</td>
+                                <td>⭐ 4.5</td>
+                            </tr>
+                            <tr>
+                                <td>Access Capital</td>
+                                <td><span class="badge badge-premium">Premium</span></td>
+                                <td>67</td>
+                                <td>1,420,000,000</td>
+                                <td>⭐ 4.8</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="dashboard-card contact-card">
+                <h2><span class="icon">📧</span> Contact Pesewa Nigeria</h2>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> nigeria-support@pesewa.com</p>
+                    <p><strong>Office Hours:</strong> Mon-Fri, 8:00 AM - 5:00 PM (WAT)</p>
+                    <p><strong>Address:</strong> Digital Office - Serving all states</p>
+                </div>
+                <form class="contact-form" id="nigeriaContactForm">
+                    <div class="input-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone">
+                    </div>
+                    <div class="input-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject">
+                            <option value="support">Account Support</option>
+                            <option value="group">Group Inquiry</option>
+                            <option value="loan">Loan Assistance</option>
+                            <option value="technical">Technical Issue</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Pesewa.com</h3>
+                    <p>Emergency micro‑lending in trusted circles across Africa.</p>
+                    <div class="footer-links">
+                        <a href="../about.html">About Us</a>
+                        <a href="../qa.html">Q&A</a>
+                        <a href="../contact.html">Global Contact</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Nigeria Operations</h3>
+                    <p>Email: nigeria-support@pesewa.com</p>
+                    <p>Currency: Nigerian Naira (NGN)</p>
+                    <p>Language: English</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Lender Agreement</a>
+                    <a href="#">Borrower Agreement</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Pesewa.com. All rights reserved. Trust-based peer-to-peer micro-lending.</p>
+                <p class="footer-note">⚠️ Loans occur off-platform. Pesewa only manages trust, reputation, and subscriptions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/utils.js"></script>
+    <script src="../../assets/js/calculator.js"></script>
+    <script src="../../assets/js/countries.js"></script>
+    <script>
+        // Country-specific calculator for NGN
+        document.getElementById('calculate').addEventListener('click', function() {
+            const amount = parseFloat(document.getElementById('amount').value) || 0;
+            const tier = document.getElementById('tier').value;
+            let maxLimit = 1500; // NGN per week basic default
+
+            if (tier === 'premium') maxLimit = 5000;
+            if (tier === 'super') maxLimit = 20000;
+
+            if (amount > maxLimit * 100) {
+                alert(`Amount exceeds weekly limit for ${tier} tier (${maxLimit.toLocaleString()} NGN/week)`);
+                return;
+            }
+
+            const interest = amount * 0.10;
+            const total = amount + interest;
+            const daily = total / 7;
+
+            document.getElementById('principal').textContent = amount.toLocaleString();
+            document.getElementById('interest').textContent = interest.toLocaleString();
+            document.getElementById('total').textContent = total.toLocaleString();
+            document.getElementById('daily').textContent = daily.toLocaleString('en-US', {minimumFractionDigits: 2});
+        });
+
+        // Contact form submission
+        document.getElementById('nigeriaContactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! Your message has been sent to Pesewa Nigeria support.');
+            this.reset();
+        });
+
+        // Initialize mobile menu
+        initMobileMenu();
+    </script>
+</body>
+</html>

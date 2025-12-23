@@ -1,0 +1,121 @@
+{
+  "subscriptions": {
+    "lender": {
+      "basic": {
+        "name": "Basic Tier",
+        "weeklyLimit": 1500,
+        "monthlyFee": 50,
+        "biAnnualFee": 250,
+        "annualFee": 500,
+        "crbCheck": false,
+        "features": [
+          "Up to 1,500 local currency/week",
+          "No CRB check required",
+          "Basic ledger management",
+          "Up to 50 active borrowers",
+          "Email support"
+        ],
+        "color": "#20BF6F"
+      },
+      "premium": {
+        "name": "Premium Tier",
+        "weeklyLimit": 5000,
+        "monthlyFee": 250,
+        "biAnnualFee": 1500,
+        "annualFee": 2500,
+        "crbCheck": false,
+        "features": [
+          "Up to 5,000 local currency/week",
+          "No CRB check required",
+          "Advanced ledger management",
+          "Up to 200 active borrowers",
+          "Priority support",
+          "Analytics dashboard",
+          "Bulk borrower management"
+        ],
+        "color": "#0A65FC"
+      },
+      "super": {
+        "name": "Super Tier",
+        "weeklyLimit": 20000,
+        "monthlyFee": 1000,
+        "biAnnualFee": 5000,
+        "annualFee": 8500,
+        "crbCheck": true,
+        "features": [
+          "Up to 20,000 local currency/week",
+          "CRB check included",
+          "Unlimited borrowers",
+          "24/7 premium support",
+          "Advanced analytics",
+          "API access",
+          "Custom reporting",
+          "Dedicated account manager"
+        ],
+        "color": "#FF9F1C"
+      }
+    },
+    "borrower": {
+      "basic": {
+        "name": "Basic Borrower",
+        "subscriptionRequired": false,
+        "weeklyLimit": 1500,
+        "features": [
+          "No subscription fee",
+          "Borrow up to 1,500/week",
+          "Join up to 4 groups",
+          "Basic profile",
+          "7-day repayment period"
+        ]
+      },
+      "premium": {
+        "name": "Premium Borrower",
+        "subscriptionRequired": true,
+        "yearlyFee": 500,
+        "weeklyLimit": 5000,
+        "features": [
+          "Yearly subscription required",
+          "Borrow up to 5,000/week",
+          "Join up to 4 groups",
+          "Enhanced profile",
+          "Priority matching",
+          "Lower interest rates available"
+        ]
+      },
+      "super": {
+        "name": "Super Borrower",
+        "subscriptionRequired": true,
+        "yearlyFee": 1200,
+        "crbFee": 300,
+        "weeklyLimit": 20000,
+        "features": [
+          "Yearly subscription + CRB fee",
+          "Borrow up to 20,000/week",
+          "Join up to 4 groups",
+          "Premium profile",
+          "Instant matching",
+          "Credit building reports",
+          "Financial coaching access"
+        ]
+      }
+    },
+    "terms": {
+      "repaymentPeriod": 7,
+      "interestRate": 10,
+      "dailyPenaltyRate": 5,
+      "defaultPeriod": 60,
+      "subscriptionExpiryDay": 28,
+      "currencyConversionFee": 1.5,
+      "platformFee": 0,
+      "notes": [
+        "All fees in local currency",
+        "Subscription renews automatically on 28th of each month",
+        "Borrowers pay NO subscription for Basic tier",
+        "Lenders must maintain active subscription to lend",
+        "7-day repayment period with 10% weekly interest",
+        "5% daily penalty after 7 days until cleared",
+        "Default after 60 days (2 months) of non-payment"
+      ]
+    }
+  }
+}
