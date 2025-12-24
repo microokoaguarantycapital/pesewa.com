@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+    <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0A65FC" />
+            <stop offset="100%" stop-color="#20BF6F" />
+        </linearGradient>
+    </defs>
+    
+    <!-- Background circle -->
+    <circle cx="50" cy="50" r="48" fill="url(#gradient)" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- P letter -->
+    <path d="M 35,30 
+             L 35,70 
+             C 35,70 45,70 45,60 
+             C 45,50 35,50 35,50 
+             L 35,30 Z" 
+          fill="#FFFFFF"/>
+    
+    <!-- Coin/currency symbol -->
+    <circle cx="65" cy="50" r="15" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+    <circle cx="65" cy="50" r="8" fill="#FFFFFF"/>
+    
+    <!-- Decorative circles -->
+    <circle cx="30" cy="30" r="3" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="70" cy="30" r="3" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="30" cy="70" r="3" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="70" cy="70" r="3" fill="#FFFFFF" opacity="0.8"/>
+</svg>
